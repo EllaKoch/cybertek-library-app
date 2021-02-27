@@ -24,11 +24,11 @@ public class Driver {
 
 
                 switch (browser) {
-                    case "remote-chrome":
+                    case "remote-chrome"://remote-firefox
                         try {
                             URL url = new URL("http://18.205.247.86:4444/wd/hub");
                             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-                            desiredCapabilities.setBrowserName("chrome");
+                            desiredCapabilities.setBrowserName("chrome");//firefox
                             driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
                         } catch (Exception e) {
                             e.printStackTrace();
