@@ -1,5 +1,6 @@
 package com.cybertek.library.utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -35,8 +36,8 @@ public class Driver {
                         }
                         break;
                     case "chrome":
-                        //WebDriverManager.chromedriver().setup();
-                        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
+                        WebDriverManager.chromedriver().setup();
+                        //System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
                         driverPool.set(new ChromeDriver());
                         driverPool.get().manage().window().fullscreen();
                         driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
