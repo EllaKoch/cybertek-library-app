@@ -35,6 +35,17 @@ public class Driver {
                             e.printStackTrace();
                         }
                         break;
+
+                    case "remote-firefox"://remote-firefox
+                        try {
+                            URL url = new URL("http://18.205.247.86:4444/wd/hub");
+                            DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                            desiredCapabilities.setBrowserName("firefox");//firefox
+                            driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        break;
                     case "chrome":
                         WebDriverManager.chromedriver().setup();
                         //System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");

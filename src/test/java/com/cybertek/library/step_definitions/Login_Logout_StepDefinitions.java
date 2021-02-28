@@ -60,7 +60,7 @@ public class Login_Logout_StepDefinitions {
 
     @Then("books should be displayed")
     public void books_should_be_displayed() {
-        String expected = "book";
+        String expected = "books";
         wait.until(ExpectedConditions.urlContains(expected));
         String actual = Driver.getDriver().getCurrentUrl();
         System.out.println("actual = " + actual);
