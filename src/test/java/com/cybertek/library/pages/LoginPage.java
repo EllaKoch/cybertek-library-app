@@ -15,10 +15,10 @@ public class LoginPage {
     public WebElement loginLogo;
 
     @FindBy(id = "inputEmail")
-    public WebElement usernameBox;
+    public WebElement usernameInput;
 
     @FindBy(id = "inputPassword")
-    public WebElement passwordBox;
+    public WebElement passwordInput;
 
     @FindBy(css = "button[type='submit']")
     public WebElement signInButton;
