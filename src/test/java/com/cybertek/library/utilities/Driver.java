@@ -25,7 +25,7 @@ public class Driver {
 
 
                 switch (browser) {
-                    case "remote-chrome"://remote-firefox
+                    case "remote-chrome":
                         try {
                             URL url = new URL("http://18.205.247.86:4444/wd/hub");
                             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
