@@ -23,8 +23,8 @@ public class Module_Access_StepDefinitions {
     public void the_student_on_the_home_page() {
         String url = ConfigurationReader.getProperty("url");
         Driver.getDriver().get(url);
-        loginPage.usernameBox.sendKeys(ConfigurationReader.getProperty("usernameS1"));
-        loginPage.passwordBox.sendKeys(ConfigurationReader.getProperty("passwordS1"));
+        loginPage.usernameInput.sendKeys(ConfigurationReader.getProperty("usernameS1"));
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("passwordS1"));
         BrowserUtils.sleep(2);
         loginPage.signInButton.click();
 
@@ -35,8 +35,8 @@ public class Module_Access_StepDefinitions {
     public void the_librarian_on_the_homepage() {
         String url = ConfigurationReader.getProperty("url");
         Driver.getDriver().get(url);
-        loginPage.usernameBox.sendKeys(ConfigurationReader.getProperty("usernameL"));
-        loginPage.passwordBox.sendKeys(ConfigurationReader.getProperty("passwordL"));
+        loginPage.usernameInput.sendKeys(ConfigurationReader.getProperty("usernameL"));
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("passwordL"));
         BrowserUtils.sleep(1);
         loginPage.signInButton.click();
     }

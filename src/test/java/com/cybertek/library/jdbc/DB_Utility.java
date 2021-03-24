@@ -20,7 +20,7 @@ public class DB_Utility {
      */
     public static void createConnection() {
 
-        String url = ConfigurationReader.getProperty("hr.database.url");
+        String url = ConfigurationReader.getProperty("l.database.url");
         String username = ConfigurationReader.getProperty("hr.database.username");
         String password = ConfigurationReader.getProperty("hr.database.password");
 //        try {
@@ -325,7 +325,7 @@ public class DB_Utility {
 
         try {
             for (int colNum = 1; colNum <=DB_Utility.rsmd.getColumnCount() ; colNum++) {
-                System.out.printf("%-26s", DB_Utility.rsmd.getColumnName(colNum));
+                System.out.printf("%-21s", DB_Utility.rsmd.getColumnName(colNum));
             }
             System.out.println();
 

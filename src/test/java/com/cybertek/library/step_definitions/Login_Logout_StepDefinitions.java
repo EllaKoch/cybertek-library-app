@@ -33,8 +33,8 @@ public class Login_Logout_StepDefinitions {
 
     @When("I login as a librarian")
     public void i_login_as_a_librarian() {
-        loginPage.usernameBox.sendKeys(ConfigurationReader.getProperty("usernameL"));
-        loginPage.passwordBox.sendKeys(ConfigurationReader.getProperty("passwordL"));
+        loginPage.usernameInput.sendKeys(ConfigurationReader.getProperty("usernameL"));
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("passwordL"));
         BrowserUtils.sleep(1);
         loginPage.signInButton.click();
     }
@@ -51,8 +51,8 @@ public class Login_Logout_StepDefinitions {
 
     @When("I login as a student")
     public void i_login_as_a_student() {
-        loginPage.usernameBox.sendKeys(ConfigurationReader.getProperty("usernameS1"));
-        loginPage.passwordBox.sendKeys(ConfigurationReader.getProperty("passwordS1"));
+        loginPage.usernameInput.sendKeys(ConfigurationReader.getProperty("usernameS1"));
+        loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("passwordS1"));
         BrowserUtils.sleep(2);
         loginPage.signInButton.click();
 
@@ -71,12 +71,12 @@ public class Login_Logout_StepDefinitions {
 
     @When("I enter username {string}")
     public void i_enter_username(String string) {
-        loginPage.usernameBox.sendKeys(string);
+        loginPage.usernameInput.sendKeys(string);
     }
 
     @When("I enter password {string}")
     public void i_enter_password(String string) {
-        loginPage.passwordBox.sendKeys(string);
+        loginPage.passwordInput.sendKeys(string);
     }
 
     @When("click the sign in button")
@@ -98,17 +98,17 @@ public class Login_Logout_StepDefinitions {
 
     @When("I login using {string} and {string}")
     public void i_login_using_username_and_password(String str1, String str2) {
-        loginPage.usernameBox.sendKeys(str1);
-        loginPage.passwordBox.sendKeys(str2);
+        loginPage.usernameInput.sendKeys(str1);
+        loginPage.passwordInput.sendKeys(str2);
         loginPage.signInButton.click();
     }
 
     @When("I login using {string}and {string}")
     public void iLoginUsingAnd(String email, String password) {
-        wait.until(ExpectedConditions.visibilityOf(loginPage.usernameBox));
-        loginPage.usernameBox.sendKeys(email);
-        wait.until(ExpectedConditions.visibilityOf(loginPage.passwordBox));
-        loginPage.passwordBox.sendKeys(password);
+        wait.until(ExpectedConditions.visibilityOf(loginPage.usernameInput));
+        loginPage.usernameInput.sendKeys(email);
+        wait.until(ExpectedConditions.visibilityOf(loginPage.passwordInput));
+        loginPage.passwordInput.sendKeys(password);
         BrowserUtils.sleep(1);
         loginPage.signInButton.click();
 
