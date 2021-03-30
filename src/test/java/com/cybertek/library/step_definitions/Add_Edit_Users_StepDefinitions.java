@@ -15,6 +15,7 @@ public class Add_Edit_Users_StepDefinitions {
     UsersPage usersPage = new UsersPage();
     Faker faker = new Faker();
     Select select;
+    String name = faker.name().fullName();
 
     @When("I click on Users module")
     public void i_click_on_users_module() {
@@ -48,7 +49,7 @@ public class Add_Edit_Users_StepDefinitions {
 
     @And("I fill out user's information form")
     public void iFillOutUserSInformationForm() {
-        usersPage.fullNameInput.sendKeys(faker.name().fullName());
+        usersPage.fullNameInput.sendKeys(name);
         usersPage.passwordInput.sendKeys(faker.internet().password());
         usersPage.emailInput.sendKeys(faker.internet().emailAddress());
         select = new Select(usersPage.userGroupDropdown);
@@ -79,4 +80,9 @@ public class Add_Edit_Users_StepDefinitions {
     }
 
 
+    @Then("New User's name should be displayed in the user's table")
+    public void newUserShouldBeDisplayedInTheUsersTable() {
+        BrowserUtils.wait(1);
+        usersPage.namesData.get(0).equals(name);
+    }
 }
