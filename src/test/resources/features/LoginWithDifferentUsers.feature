@@ -3,7 +3,7 @@ Feature: Data driven testing with different user accounts
   using their correct emails and passwords. When I login,
   I should be able to see username in the account username section.
 
-  @students
+  @students @regression
   Scenario Outline: Verify user information email
     #Given I am on the login page
     When I login using "<email>"and "<password>"

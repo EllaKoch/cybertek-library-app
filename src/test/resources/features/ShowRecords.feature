@@ -4,7 +4,7 @@ Feature: Show records
     #Given I am on the login page
     When I login as a librarian
 
-
+  @regression
   Scenario: verify default values in Users page
     When I click on "Users" link
     Then show records default value should be 10

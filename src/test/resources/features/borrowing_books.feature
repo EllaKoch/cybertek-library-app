@@ -1,6 +1,6 @@
 Feature: Column names
   As a user, I should able to see my borrowing books.
-@2
+  @regression
   Scenario: Borrowing books table columns names
     Given I login as a student
     When  I click Borrowing Books module

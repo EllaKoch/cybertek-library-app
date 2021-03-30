@@ -1,6 +1,6 @@
 Feature: Logout feature
   As a user, I should be able to logout from the library app.
-
+  @regression
   Scenario Outline: verify users can logout
     #Given I am on the login page
     When I login using "<email>"and "<password>"
