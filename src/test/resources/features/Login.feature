@@ -14,7 +14,7 @@ Feature: Library app login feature
     Then books should be displayed
 
 
-  @regression
+
   Scenario Outline: verify both Students and librarians login
     Given the user login as a "<role>"
     Then the user on  "<page>"

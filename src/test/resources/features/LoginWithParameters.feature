@@ -20,12 +20,12 @@ Feature: Login with parameters
     And I enter password 'QKjmEIhB'
     And click the sign in button
     Then dashboard should be displayed
-    And there should be 2942 users
+    And there should be 4700 users
      #number can be whatever you have there
   @regression
   Scenario: Login as librarian same line
     #Given I am on the login page
     When I login using 'librarian52@library' and "QKjmEIhB"
     Then dashboard should be displayed
-    And there should be 2942 users
+    And there should be 4700 users
     #number can be whatever you have there
