@@ -13,7 +13,7 @@ Feature: add users
     And click Save Changes button
     Then 'The user has been created.' message should be displayed
 
-
+  @smoke
   Scenario: verify user's name is added to the user's table
     And I click on Users module
     And click the Add User button
@@ -29,7 +29,7 @@ Feature: add users
     Then user form is closed
 
 
-  @regression
+
   Scenario: Librarians able to edit user info.
     And I click on Users module
     And click Edit button
