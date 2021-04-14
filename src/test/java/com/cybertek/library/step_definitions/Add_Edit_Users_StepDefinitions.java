@@ -76,6 +76,7 @@ public class Add_Edit_Users_StepDefinitions {
 
     @When("click Save Changes button")
     public void click_save_changes_button() {
+        BrowserUtils.wait(1);
         usersPage.saveChangesButton.click();
     }
 
