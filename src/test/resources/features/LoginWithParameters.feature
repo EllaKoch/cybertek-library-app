@@ -15,18 +15,18 @@ Feature: Login with parameters
     And click the sign in button
     Then books should be displayed
 
-  Scenario: Login as librarian 52
+    #Scenario: Login as librarian 52
     #Given I am on the login page
-    When I enter username "librarian52@library"
-    And I enter password 'QKjmEIhB'
-    And click the sign in button
-    Then dashboard should be displayed
-    And there should be 4821 users
+    #When I enter username "librarian52@library"
+    #And I enter password 'QKjmEIhB'
+    #And click the sign in button
+    #Then dashboard should be displayed
+    #And there should be 4821 users
      #number can be whatever you have there
 
-  Scenario: Login as librarian same line
+   #Scenario: Login as librarian same line
     #Given I am on the login page
-    When I login using 'librarian52@library' and "QKjmEIhB"
-    Then dashboard should be displayed
-    And there should be 4821 users
+    #When I login using 'librarian52@library' and "QKjmEIhB"
+    #Then dashboard should be displayed
+    #And there should be 4821 users
     #number can be whatever you have there
