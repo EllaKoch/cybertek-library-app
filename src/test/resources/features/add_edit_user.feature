@@ -5,7 +5,7 @@ Feature: add users
   Background: Given I am on the login page
     When I login as a librarian
 
-   @smoke
+
   Scenario: add users with all valid info
     And I click on Users module
     And click the Add User button
