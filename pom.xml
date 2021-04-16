@@ -13,10 +13,8 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -26,6 +24,8 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -69,7 +69,30 @@
 
     </build>
 
+    <profiles>
+        <profile>
+            <id>Regression</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.0.0-M5</version>
+                        <configuration>
+                            <parallel>methods</parallel>
+                            <threadCount>2</threadCount>
+                            <perCoreThreadCount>false</perCoreThreadCount>
+                            <includes>
+                                <include>**/RegressionRunner.java</include>
+                            </includes>
+                            <testFailureIgnore>false</testFailureIgnore>
+                        </configuration>
+                    </plugin>
 
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <dependencies>
 
