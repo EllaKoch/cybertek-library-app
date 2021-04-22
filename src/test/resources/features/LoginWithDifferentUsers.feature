@@ -43,5 +43,4 @@ Feature: Data driven testing with different user accounts
       | student40@library   | sK7ctVOS | Test Student 40   |
       | student41@library   | MhQEHwP8 | Test Student 41   |
       | student42@library   | zCm83mcJ | Test Student 42   |
-      | student43@library   | 7F1rV4W8 | Test Student 43   |
       | student44@library   | BIXPElK5 | Test Student 44   |
